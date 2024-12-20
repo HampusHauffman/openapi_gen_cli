@@ -1,0 +1,30 @@
+openapi: 3.0.0
+info:
+  description: A sample API to illustrate OpenAPI Generator
+  title: Sample API
+  version: 1.0.0
+servers:
+- url: /
+paths:
+  /pet:
+    get:
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_pet_get_200_response'
+          description: A BIG pet 2
+      summary: Get a pet
+components:
+  schemas:
+    _pet_get_200_response:
+      example:
+        name: name
+        id: 0
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+      type: object
